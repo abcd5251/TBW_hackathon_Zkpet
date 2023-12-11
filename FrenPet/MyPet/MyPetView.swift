@@ -13,6 +13,8 @@ struct MyPetView: View {
             // Pet Main View
             VStack {
                 PetMetricsView()
+
+                PetMetricsBottomView()
             }
         }
     }

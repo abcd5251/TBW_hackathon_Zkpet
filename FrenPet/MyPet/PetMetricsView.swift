@@ -18,7 +18,7 @@ struct PetMetricsView: View {
                         Text("232323FE")
                     }
                 }
-                
+
                 Spacer()
 
                 HStack {
