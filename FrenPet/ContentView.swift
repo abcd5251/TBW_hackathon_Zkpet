@@ -13,20 +13,14 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-        
-        TabView(selection: $settings.selectedTabIndex) {
-//            HomeView().tabItem {
-//                NavigationLink(destination: HomeView()) {
-//                    Label("Home", systemImage: "house")
-//                }
-//            }.tag(1)
-        }
+            TabView(selection: $settings.selectedTabIndex) {
+                MyPetView().tabItem {
+                    NavigationLink(destination: MyPetView()) {
+                        Label("My Pet", systemImage: "cat")
+                    }
+                }.tag(1)
+            }
+        }        
     }
 }
 

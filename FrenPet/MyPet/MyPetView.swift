@@ -23,7 +23,7 @@ struct MyPetView: View {
                            .offset(x: moveRight ? 50 : -50, y: 0) // 左右移動 100 點的距離
                                        .animation(.easeInOut(duration: 1).repeatForever(autoreverses: true), value: moveRight)
                                        .onAppear() {
-                                           moveRight.toggle() // 當視圖出現時開始動畫
+//                                           moveRight.toggle() // 當視圖出現時開始動畫
                                        }
 
                 PetMetricsBottomView()
