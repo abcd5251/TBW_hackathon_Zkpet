@@ -14,6 +14,7 @@
 		4CBA61B32B26AFFB0088891B /* GlobalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA61B22B26AFFB0088891B /* GlobalSettings.swift */; };
 		4CBA61B92B26B4E30088891B /* MyPetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA61B82B26B4E30088891B /* MyPetView.swift */; };
 		4CBA61BB2B26B9B10088891B /* PetMetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA61BA2B26B9B10088891B /* PetMetricsView.swift */; };
+		4CBA61BE2B26BF960088891B /* PetMetricsBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA61BD2B26BF960088891B /* PetMetricsBottomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		4CBA61B22B26AFFB0088891B /* GlobalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSettings.swift; sourceTree = "<group>"; };
 		4CBA61B82B26B4E30088891B /* MyPetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetView.swift; sourceTree = "<group>"; };
 		4CBA61BA2B26B9B10088891B /* PetMetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetMetricsView.swift; sourceTree = "<group>"; };
+		4CBA61BD2B26BF960088891B /* PetMetricsBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetMetricsBottomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				4CBA61B52B26B1750088891B /* MyPet */,
 				4CBA61B62B26B17E0088891B /* Leaderboard */,
 				4CBA61B72B26B1960088891B /* Rewards */,
+				4CBA61BC2B26BED90088891B /* QRCode */,
 				4CBA61B22B26AFFB0088891B /* GlobalSettings.swift */,
 				4CBA61A42B26AF770088891B /* FrenPetApp.swift */,
 				4CBA61A62B26AF770088891B /* ContentView.swift */,
@@ -90,6 +93,7 @@
 			children = (
 				4CBA61B82B26B4E30088891B /* MyPetView.swift */,
 				4CBA61BA2B26B9B10088891B /* PetMetricsView.swift */,
+				4CBA61BD2B26BF960088891B /* PetMetricsBottomView.swift */,
 			);
 			path = MyPet;
 			sourceTree = "<group>";
@@ -106,6 +110,13 @@
 			children = (
 			);
 			path = Rewards;
+			sourceTree = "<group>";
+		};
+		4CBA61BC2B26BED90088891B /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = QRCode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +192,7 @@
 				4CBA61B92B26B4E30088891B /* MyPetView.swift in Sources */,
 				4CBA61BB2B26B9B10088891B /* PetMetricsView.swift in Sources */,
 				4CBA61A72B26AF770088891B /* ContentView.swift in Sources */,
+				4CBA61BE2B26BF960088891B /* PetMetricsBottomView.swift in Sources */,
 				4CBA61A52B26AF770088891B /* FrenPetApp.swift in Sources */,
 				4CBA61B32B26AFFB0088891B /* GlobalSettings.swift in Sources */,
 			);
