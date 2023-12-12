@@ -77,6 +77,7 @@ class MyPetViewModel: ObservableObject {
     func cleanUp() {
         wasteLevel = 0
         healthLevel = min(healthLevel + 1, 10)
+        wasteTimer?.invalidate()
         updateMood()
     }
     
