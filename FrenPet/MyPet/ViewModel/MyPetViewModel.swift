@@ -11,7 +11,7 @@ import Combine
 enum Mood: String {
     case happy = "😄"
     case sad = "😔"
-    case hungry = "😋"
+    case fullEating = "😋"
     case sleepy = "😴"
     case bored = "😐"
     case sick = "🤒"
@@ -20,6 +20,7 @@ enum Mood: String {
 class MyPetViewModel: ObservableObject {
     @Published var mood: Mood = .happy
     @Published var hungerLevel: Int = 5
+    @Published var fullEatingLevel: Int = 5
     @Published var energyLevel: Int = 5
     @Published var healthLevel: Int = 5
     @Published var wasteLevel: Int = 0
@@ -29,15 +30,15 @@ class MyPetViewModel: ObservableObject {
     
     // 更新電子雞的心情
     func updateMood() {
-        if hungerLevel > 7 {
-            mood = .hungry
+        if fullEatingLevel < 3 {
+            mood = .fullEating
         } else if energyLevel < 3 {
             mood = .sleepy
         } else if healthLevel < 5 {
             mood = .sick
         } else if wasteLevel > 3 {
             mood = .sad
-        } else if hungerLevel < 3 && energyLevel > 7 && healthLevel > 7 {
+        } else if hungerLevel > 7 && energyLevel > 7 && healthLevel > 7 {
             mood = .happy
         } else {
             mood = .bored
@@ -47,7 +48,7 @@ class MyPetViewModel: ObservableObject {
     // 餵食電子雞
     func feed() {
         print("feed")
-        hungerLevel = max(hungerLevel - 3, 0)
+        fullEatingLevel = max(fullEatingLevel + 3, 10)
         updateMood()
         startWasterTimer()
     }

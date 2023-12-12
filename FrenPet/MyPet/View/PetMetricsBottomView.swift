@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct PetMetricsBottomView: View {
-    @State private var progress: CGFloat = 0.0
+    var fullEatingLevelProgress: CGFloat
+    var energyLevelProgress: CGFloat
+    var healthLevelProgress: CGFloat
     var body: some View {
         VStack {
             HStack {
@@ -24,15 +26,15 @@ struct PetMetricsBottomView: View {
             }
 
             VStack {
-                ProgressBarView(progress: progress)
+                ProgressBarView(progress: fullEatingLevelProgress, themeBackground: .fullEating(.background), themeForeground: .fullEating(.foreground))
                     .frame(height: 20)
-                    .padding(30)
-
-                Button("增加進度") {
-                    if progress < 1.0 {
-                        progress += 0.1
-                    }
-                }
+                    .padding(5)
+                ProgressBarView(progress: energyLevelProgress, themeBackground: .energy(.background), themeForeground: .energy(.foreground))
+                    .frame(height: 20)
+                    .padding(5)
+                ProgressBarView(progress: healthLevelProgress, themeBackground: .health(.background), themeForeground: .health(.foreground))
+                    .frame(height: 20)
+                    .padding(5)
             }
 
             HStack {
@@ -49,6 +51,6 @@ struct PetMetricsBottomView: View {
     }
 }
 
-#Preview {
-    PetMetricsBottomView()
-}
+// #Preview {
+//    PetMetricsBottomView()
+// }

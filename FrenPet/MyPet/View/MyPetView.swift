@@ -48,8 +48,8 @@ struct MyPetView: View {
                         }
                     }
                 }
-
-                PetMetricsBottomView()
+                
+                PetMetricsBottomView(fullEatingLevelProgress: CGFloat(viewModel.fullEatingLevel) / 10, energyLevelProgress: CGFloat(viewModel.energyLevel) / 10 , healthLevelProgress: CGFloat(viewModel.healthLevel) / 10)
 
                 PetInteractionView(viewModel: viewModel)
 
