@@ -21,6 +21,7 @@ class MyPetViewModel: ObservableObject {
     @Published var hungerLevel: Int = 5
     @Published var energyLevel: Int = 5
     @Published var healthLevel: Int = 5
+    @Published var wasteLevel: Int = 0
     
     // 更新電子雞的心情
     func updateMood() {
@@ -30,6 +31,8 @@ class MyPetViewModel: ObservableObject {
             mood = .sleepy
         } else if healthLevel < 5 {
             mood = .sick
+        } else if wasteLevel > 3 {
+            mood = .sad
         } else if hungerLevel < 3 && energyLevel > 7 && healthLevel > 7 {
             mood = .happy
         } else {
@@ -61,6 +64,13 @@ class MyPetViewModel: ObservableObject {
     // 處理電子雞生病
     func medicate() {
         healthLevel = min(healthLevel + 5, 10)
+        updateMood()
+    }
+    
+    // 清理大便的方法
+    func cleanUp() {
+        wasteLevel = 0
+        healthLevel = min(healthLevel + 1, 10)
         updateMood()
     }
 }
