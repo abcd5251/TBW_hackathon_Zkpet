@@ -19,6 +19,7 @@
 		4CBA61C32B26E3910088891B /* PrizeRouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA61C22B26E3910088891B /* PrizeRouletteView.swift */; };
 		4CBA61C72B2807A00088891B /* PetInteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA61C62B2807A00088891B /* PetInteractionView.swift */; };
 		4CBA61C92B281FD90088891B /* PetActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA61C82B281FD90088891B /* PetActivitiesView.swift */; };
+		4CBA61CD2B2825500088891B /* MyPetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA61CC2B2825500088891B /* MyPetViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		4CBA61C22B26E3910088891B /* PrizeRouletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeRouletteView.swift; sourceTree = "<group>"; };
 		4CBA61C62B2807A00088891B /* PetInteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetInteractionView.swift; sourceTree = "<group>"; };
 		4CBA61C82B281FD90088891B /* PetActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetActivitiesView.swift; sourceTree = "<group>"; };
+		4CBA61CC2B2825500088891B /* MyPetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +102,8 @@
 		4CBA61B52B26B1750088891B /* MyPet */ = {
 			isa = PBXGroup;
 			children = (
-				4CBA61B82B26B4E30088891B /* MyPetView.swift */,
-				4CBA61BA2B26B9B10088891B /* PetMetricsView.swift */,
-				4CBA61BD2B26BF960088891B /* PetMetricsBottomView.swift */,
-				4CBA61BF2B26D3E10088891B /* ProgressBarView.swift */,
-				4CBA61C62B2807A00088891B /* PetInteractionView.swift */,
-				4CBA61C82B281FD90088891B /* PetActivitiesView.swift */,
+				4CBA61CA2B2824630088891B /* View */,
+				4CBA61CB2B2824780088891B /* ViewModel */,
 			);
 			path = MyPet;
 			sourceTree = "<group>";
@@ -137,6 +135,27 @@
 				4CBA61C22B26E3910088891B /* PrizeRouletteView.swift */,
 			);
 			path = PrizeRoulette;
+			sourceTree = "<group>";
+		};
+		4CBA61CA2B2824630088891B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4CBA61B82B26B4E30088891B /* MyPetView.swift */,
+				4CBA61BA2B26B9B10088891B /* PetMetricsView.swift */,
+				4CBA61BD2B26BF960088891B /* PetMetricsBottomView.swift */,
+				4CBA61BF2B26D3E10088891B /* ProgressBarView.swift */,
+				4CBA61C62B2807A00088891B /* PetInteractionView.swift */,
+				4CBA61C82B281FD90088891B /* PetActivitiesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4CBA61CB2B2824780088891B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4CBA61CC2B2825500088891B /* MyPetViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +232,7 @@
 				4CBA61BB2B26B9B10088891B /* PetMetricsView.swift in Sources */,
 				4CBA61C32B26E3910088891B /* PrizeRouletteView.swift in Sources */,
 				4CBA61A72B26AF770088891B /* ContentView.swift in Sources */,
+				4CBA61CD2B2825500088891B /* MyPetViewModel.swift in Sources */,
 				4CBA61C72B2807A00088891B /* PetInteractionView.swift in Sources */,
 				4CBA61C92B281FD90088891B /* PetActivitiesView.swift in Sources */,
 				4CBA61BE2B26BF960088891B /* PetMetricsBottomView.swift in Sources */,

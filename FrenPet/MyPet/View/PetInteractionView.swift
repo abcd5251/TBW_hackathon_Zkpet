@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct PetInteractionView: View {
+    var viewModel: MyPetViewModel
     var body: some View {
         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
             Button(action: {
                 print("fish button tapped")
+                viewModel.feed()
             }) {
                 Image(systemName: "fish")
                     .buttonStyle()
@@ -70,6 +72,6 @@ extension Image {
     }
 }
 
-#Preview {
-    PetInteractionView()
-}
+//#Preview {
+//    PetInteractionView()
+//}
