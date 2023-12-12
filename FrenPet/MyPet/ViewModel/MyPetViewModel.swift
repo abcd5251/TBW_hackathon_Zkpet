@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 enum Mood: String {
     case happy = "😄"
@@ -22,6 +23,9 @@ class MyPetViewModel: ObservableObject {
     @Published var energyLevel: Int = 5
     @Published var healthLevel: Int = 5
     @Published var wasteLevel: Int = 0
+    
+    private var wasteTimer: Timer?
+    private var cancellables = Set<AnyCancellable>()
     
     // 更新電子雞的心情
     func updateMood() {
@@ -45,6 +49,7 @@ class MyPetViewModel: ObservableObject {
         print("feed")
         hungerLevel = max(hungerLevel - 3, 0)
         updateMood()
+        startWasterTimer()
     }
     
     // 讓電子雞休息
@@ -72,5 +77,27 @@ class MyPetViewModel: ObservableObject {
         wasteLevel = 0
         healthLevel = min(healthLevel + 1, 10)
         updateMood()
+    }
+    
+    // 啟動或重置計時器
+    func startWasterTimer() {
+        // 如果已經有一個計時器在運行，先取消它
+        wasteTimer?.invalidate()
+        
+        // 設定一個新的計時器
+        wasteTimer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { [weak self] _ in
+            self?.incrementWasteLevel()
+        }
+    }
+    
+    // 增加大便數量的方法
+    private func incrementWasteLevel() {
+        print("incrementWasteLevel")
+        wasteLevel += 1
+    }
+    
+    // 在deinit中取消計時器
+    deinit {
+        wasteTimer?.invalidate()
     }
 }
