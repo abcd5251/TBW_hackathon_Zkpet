@@ -20,6 +20,7 @@
 		4CBA61C72B2807A00088891B /* PetInteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA61C62B2807A00088891B /* PetInteractionView.swift */; };
 		4CBA61C92B281FD90088891B /* PetActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA61C82B281FD90088891B /* PetActivitiesView.swift */; };
 		4CBA61CD2B2825500088891B /* MyPetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA61CC2B2825500088891B /* MyPetViewModel.swift */; };
+		4CBA61D02B28C7680088891B /* metamask-ios-sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 4CBA61CF2B28C7680088891B /* metamask-ios-sdk */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CBA61D02B28C7680088891B /* metamask-ios-sdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +176,9 @@
 			dependencies = (
 			);
 			name = FrenPet;
+			packageProductDependencies = (
+				4CBA61CF2B28C7680088891B /* metamask-ios-sdk */,
+			);
 			productName = FrenPet;
 			productReference = 4CBA61A12B26AF770088891B /* FrenPet.app */;
 			productType = "com.apple.product-type.application";
@@ -202,6 +207,9 @@
 				Base,
 			);
 			mainGroup = 4CBA61982B26AF770088891B;
+			packageReferences = (
+				4CBA61CE2B28C7680088891B /* XCRemoteSwiftPackageReference "metamask-ios-sdk" */,
+			);
 			productRefGroup = 4CBA61A22B26AF770088891B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -442,6 +450,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4CBA61CE2B28C7680088891B /* XCRemoteSwiftPackageReference "metamask-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MetaMask/metamask-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4CBA61CF2B28C7680088891B /* metamask-ios-sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4CBA61CE2B28C7680088891B /* XCRemoteSwiftPackageReference "metamask-ios-sdk" */;
+			productName = "metamask-ios-sdk";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4CBA61992B26AF770088891B /* Project object */;
 }
