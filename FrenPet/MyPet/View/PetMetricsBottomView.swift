@@ -26,15 +26,43 @@ struct PetMetricsBottomView: View {
             }
 
             VStack {
-                ProgressBarView(progress: fullEatingLevelProgress, themeBackground: .fullEating(.background), themeForeground: .fullEating(.foreground))
-                    .frame(height: 20)
-                    .padding(5)
-                ProgressBarView(progress: energyLevelProgress, themeBackground: .energy(.background), themeForeground: .energy(.foreground))
-                    .frame(height: 20)
-                    .padding(5)
-                ProgressBarView(progress: healthLevelProgress, themeBackground: .health(.background), themeForeground: .health(.foreground))
-                    .frame(height: 20)
-                    .padding(5)
+                HStack {
+                    Image("Stomach")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 36, height: 36)
+                        .background(Color.clear)
+
+                    ProgressBarView(progress: fullEatingLevelProgress, themeBackground: .fullEating(.background), themeForeground: .fullEating(.foreground))
+                        .frame(height: 20)
+                }
+                .padding(5)
+
+                HStack {
+                    Image(systemName: "bolt.heart.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 36, height: 36)
+                        .background(Color.clear)
+                        .foregroundColor(Color(UIColor.systemYellow).opacity(0.7))
+
+                    ProgressBarView(progress: energyLevelProgress, themeBackground: .energy(.background), themeForeground: .energy(.foreground))
+                        .frame(height: 20)
+                }
+                .padding(5)
+
+                HStack {
+                    Image(systemName: "heart.circle")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 36, height: 36)
+                        .background(Color.clear)
+                        .foregroundColor(Color(UIColor.systemRed).opacity(0.7))
+
+                    ProgressBarView(progress: healthLevelProgress, themeBackground: .health(.background), themeForeground: .health(.foreground))
+                        .frame(height: 20)
+                }
+                .padding(5)
             }
 
             HStack {
