@@ -10,7 +10,8 @@ import SwiftUI
 struct MyPetView: View {
     @State private var moveRight = false
     var body: some View {
-        VStack {
+        
+        NavigationView {
             // Pet Main View
             VStack {
                 PetMetricsView()
@@ -29,6 +30,8 @@ struct MyPetView: View {
                 PetMetricsBottomView()
 
                 PetInteractionView()
+                
+                PetActivitiesView()
             }
             .background(Color(red: 1.0, green: 0.8, blue: 0.6).opacity(0.3))
         }
