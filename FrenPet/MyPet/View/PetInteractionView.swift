@@ -13,44 +13,48 @@ struct PetInteractionView: View {
         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
             Button(action: {
                 print("fish button tapped")
-                viewModel.feed()
+                self.viewModel.feed()
             }) {
                 Image(systemName: "fish")
                     .buttonStyle()
             }
 
             Button(action: {
-                print("bird button tapped")
-            }) {
-                Image(systemName: "bird")
-                    .buttonStyle()
-            }
-
-            Button(action: {
-                print("carrot button tapped")
-            }) {
-                Image(systemName: "carrot")
-                    .buttonStyle()
-            }
-
-            Button(action: {
-                print("leaf button tapped")
-            }) {
-                Image(systemName: "leaf")
-                    .buttonStyle()
-            }
-
-            Button(action: {
-                print("waterbottle button tapped")
+                print("birthday.cake button tapped")
             }) {
                 Image(systemName: "waterbottle")
                     .buttonStyle()
             }
 
             Button(action: {
-                print("birthday.cake button tapped")
+                print("teddybear button tapped 玩遊戲來提高電子雞的心情")
+                self.viewModel.play()
             }) {
-                Image(systemName: "birthday.cake")
+                Image(systemName: "teddybear")
+                    .buttonStyle()
+            }
+
+            Button(action: {
+                print("bird button tapped 讓電子雞休息")
+                self.viewModel.reset()
+            }) {
+                Image(systemName: "bed.double")
+                    .buttonStyle()
+            }
+
+            Button(action: {
+                print("sick button tapped 處理電子雞生病")
+                self.viewModel.medicate()
+            }) {
+                Image(systemName: "syringe")
+                    .buttonStyle()
+            }
+
+            Button(action: {
+                print("waterbottle button tapped 清理大便的方法")
+                self.viewModel.cleanUp()
+            }) {
+                Image(systemName: "tray.and.arrow.up")
                     .buttonStyle()
             }
         }
@@ -72,6 +76,6 @@ extension Image {
     }
 }
 
-//#Preview {
+// #Preview {
 //    PetInteractionView()
-//}
+// }
